@@ -22,7 +22,9 @@ RUN composer install --no-dev --optimize-autoloader \
     && npm run build
 
 # Démarrage
-CMD php artisan config:clear \
+CMD php artisan config:cache \
+    && php artisan route:cache \
+    && php artisan view:cache \
     && php artisan migrate --force \
     && php artisan db:seed --class=AdminUserSeeder --force \
     && php artisan storage:link --force \
