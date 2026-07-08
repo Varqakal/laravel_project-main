@@ -33,4 +33,6 @@ return [
 
     'admin_email' => env('ADMIN_NOTIFY_EMAIL', env('ADMIN_EMAIL')),
 
+    'whatsapp' => env('CONTACT_WHATSAPP'),
+
 ];

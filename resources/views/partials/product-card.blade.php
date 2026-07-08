@@ -21,10 +21,7 @@
                     <span class="price-old">${{ number_format($product->old_price, 2) }}</span>
                 @endif
             </div>
-            <a href="{{ route('contact') }}?product_id={{ $product->id }}"
-               class="btn btn-primary btn-sm w-100 mt-2">
-                Commander
-            </a>
+            <x-whatsapp-button :product="$product" label="Commander" class="btn btn-whatsapp btn-sm w-100 mt-2 justify-content-center" />
         </div>
     </div>
 </div>

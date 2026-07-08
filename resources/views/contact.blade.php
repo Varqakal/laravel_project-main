@@ -5,7 +5,7 @@
 @section('content')
 
 {{-- ── Hero ─────────────────────────────────────────────────── --}}
-<div style="background:linear-gradient(135deg,var(--bg-base) 0%,#111d35 100%);padding:56px 0;border-bottom:1px solid var(--border);">
+<div style="background:linear-gradient(135deg,var(--bg-base) 0%,var(--hero-gradient-end) 100%);padding:56px 0;border-bottom:1px solid var(--border);">
     <div class="container">
         <div class="d-flex flex-wrap gap-2 mb-4">
             <span class="contact-pill green">&#10003; Réponse sous 24h</span>
@@ -15,7 +15,7 @@
         <h1 class="fw-bold mb-2" style="font-size:clamp(1.7rem,3.5vw,2.6rem);letter-spacing:-.5px;color:var(--text-primary);">
             Commandez en quelques minutes
         </h1>
-        <p style="color:rgba(255,255,255,.68);max-width:540px;font-size:1rem;line-height:1.7;margin:0;">
+        <p style="color:var(--text-secondary);max-width:540px;font-size:1rem;line-height:1.7;margin:0;">
             Remplissez le formulaire ci-dessous ou contactez-nous directement sur WhatsApp.
             Notre équipe vous répond personnellement sous 24 heures.
         </p>

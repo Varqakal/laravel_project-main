@@ -31,6 +31,8 @@
     --badge-hot:  #ef4444;
     --badge-sale: #f59e0b;
 
+    --hero-gradient-end: #111d35;
+
     /* kept for admin backward compat */
     --dark: #060b14;
 }
@@ -50,6 +52,8 @@
     --border-glow:   rgba(0, 168, 132, 0.3);
 
     --shadow-hover:  0 24px 60px rgba(15, 23, 42, 0.12);
+
+    --hero-gradient-end: #e3e9f2;
 }
 
 /* ── Theme toggle button ────────────────────────────────── */
@@ -83,7 +87,7 @@
 
 /* ── Reset & Base ───────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
     font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -91,6 +95,7 @@ body {
     color: var(--text-primary);
     line-height: 1.65;
     padding-top: 70px;
+    overflow-x: hidden;
 }
 body.admin-body { padding-top: 0; background: #f0f4f9; color: #333; }
 
@@ -825,12 +830,12 @@ section.py-5 { padding: 90px 0 !important; }
    PAGE HERO (contact, about, etc.)
    ───────────────────────────────────────────────────────── */
 .page-hero {
-    background: linear-gradient(135deg, var(--bg-base) 0%, #111d35 100%);
-    color: #fff;
+    background: linear-gradient(135deg, var(--bg-base) 0%, var(--hero-gradient-end) 100%);
+    color: var(--text-primary);
     padding: 60px 0;
     border-bottom: 1px solid var(--border);
 }
-.page-hero p { color: rgba(255,255,255,.72); margin: 0; }
+.page-hero p { color: var(--text-secondary); margin: 0; }
 
 /* ─────────────────────────────────────────────────────────
    SIDEBAR LINKS — legacy (kept for compatibility)
@@ -1206,6 +1211,7 @@ section.py-5 { padding: 90px 0 !important; }
     box-shadow: 0 12px 32px rgba(37,211,102,.38);
 }
 .btn-whatsapp svg { flex-shrink: 0; }
+.btn-whatsapp.btn-sm svg { width: 15px; height: 15px; }
 
 /* ── Value Cards (about page) ─────────────────────────────── */
 .val-num {

@@ -61,11 +61,8 @@
             @endif
 
             <div class="d-flex flex-wrap gap-3 mt-3">
-                <a href="{{ route('contact') }}?product_id={{ $product->id }}"
-                   class="btn btn-primary btn-lg px-5">
-                    Commander ce produit
-                </a>
-                <a href="{{ route('contact') }}" class="btn btn-outline-primary btn-lg">
+                <x-whatsapp-button :product="$product" label="Commander ce produit" class="btn btn-whatsapp btn-lg px-5 justify-content-center" />
+                <a href="{{ route('contact') }}?product_id={{ $product->id }}" class="btn btn-outline-primary btn-lg">
                     Nous contacter
                 </a>
             </div>

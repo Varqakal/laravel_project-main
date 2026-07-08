@@ -75,11 +75,9 @@
                 </svg>
             </button>
 
-            <a href="{{ route('contact') }}"
-               class="btn btn-primary btn-sm d-none d-lg-inline-block"
-               style="padding: 8px 22px; border-radius: 9px; font-size: .85rem;">
-                Commander
-            </a>
+            <x-whatsapp-button label="Commander"
+                class="btn btn-whatsapp btn-sm d-none d-lg-inline-flex justify-content-center"
+                style="padding: 8px 22px; border-radius: 9px; font-size: .85rem;" />
 
             {{-- Mobile toggler --}}
             <button class="navbar-toggler d-lg-none" type="button"
@@ -120,7 +118,7 @@
                 @endforeach
                 <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">À propos</a></li>
                 <li class="nav-item mt-2">
-                    <a class="btn btn-primary w-100" href="{{ route('contact') }}">Commander</a>
+                    <x-whatsapp-button label="Commander" class="btn btn-whatsapp w-100 justify-content-center" />
                 </li>
             </ul>
         </div>

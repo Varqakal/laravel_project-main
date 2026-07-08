@@ -5,7 +5,7 @@
 @section('content')
 
 {{-- ── En-tête de page ────────────────────────────────────── --}}
-<div style="background:linear-gradient(135deg,var(--bg-base) 0%,#111d35 100%);border-bottom:1px solid var(--border);padding:36px 0 0;">
+<div style="background:linear-gradient(135deg,var(--bg-base) 0%,var(--hero-gradient-end) 100%);border-bottom:1px solid var(--border);padding:36px 0 0;">
     <div class="container">
         <nav aria-label="breadcrumb" class="mb-3">
             <ol class="breadcrumb" style="margin:0;font-size:.82rem;">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\ContactMessage;
 use App\Models\Product;
+use App\Support\Whatsapp;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
@@ -18,8 +19,7 @@ class ContactController extends Controller
             ? Product::find($request->product_id)
             : null;
 
-        $rawPhone = preg_replace('/[^0-9]/', '', env('CONTACT_WHATSAPP', ''));
-        $whatsappLink = $rawPhone ? 'https://wa.me/' . $rawPhone : null;
+        $whatsappLink = Whatsapp::link($selectedProduct);
 
         return view('contact', compact('categories', 'selectedProduct', 'whatsappLink'));
     }

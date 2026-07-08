@@ -6,7 +6,7 @@
 <div class="page-hero text-center">
     <div class="container">
         <h1 class="fw-bold display-5 mb-3">À propos de nous</h1>
-        <p style="max-width:600px; margin:0 auto; color:rgba(255,255,255,.75);">
+        <p style="max-width:600px; margin:0 auto;">
             Votre partenaire de confiance pour les appareils électroniques de qualité à Kinshasa.
         </p>
     </div>
